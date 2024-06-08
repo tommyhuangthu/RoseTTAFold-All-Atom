@@ -90,7 +90,7 @@ We use a library called Hydra to compose config files for predictions. The actua
 
 The general way to run the model is as follows:
 ```
-python -m rf2aa.run_inference --config-name {your inference config}
+python3 -m rf2aa.run_inference --config-name {your inference config}
 ```
 The main inputs into the model are split into:
 - protein inputs (protein_inputs)
@@ -120,7 +120,7 @@ When specifying the fasta file for your protein, you might notice that it is nes
 
 Now to predict the sample monomer structure, run:
 ```
-python -m rf2aa.run_inference --config-name protein
+python3 -m rf2aa.run_inference --config-name protein
 ```
 
 <a id="p-na-complex"></a>
@@ -148,7 +148,7 @@ This repo currently does not support making RNA MSAs or pairing protein MSAs wit
 
 Now, predict the example protein/NA complex. 
 ```
-python -m rf2aa.run_inference --config-name nucleic_acid
+python3 -m rf2aa.run_inference --config-name nucleic_acid
 ```
 <a id="p-sm-complex"></a>
 ### Predicting Protein Small Molecule Complexes
@@ -174,7 +174,7 @@ Small molecule inputs are provided as sdf files or smiles strings and users are 
 
 To predict the example:
 ```
-python -m rf2aa.run_inference --config-name protein_sm
+python3 -m rf2aa.run_inference --config-name protein_sm
 ```
 <a id="higher-order"></a>
 ### Predicting Higher Order Complexes
@@ -203,7 +203,7 @@ sm_inputs:
 ```
 And to run:
 ```
-python -m rf2aa.run_inference --config-name protein_na_sm
+python3 -m rf2aa.run_inference --config-name protein_na_sm
 ```
 <a id="covale"></a>
 ### Predicting Covalently Modified Proteins
